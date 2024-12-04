@@ -1,81 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página inicial e responsiva">
-    <title>Página Bonita</title>
-    
-    <!-- Link do CSS do Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Fontes do Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Estilo personalizado -->
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-        }
-        header {
-            background: linear-gradient(90deg, #6a11cb, #d78ac2);
-            color: white;
-            padding: 20px 0;
-        }
-        header h1 {
-            font-weight: 700;
-        }
-        .btn-custom {
-            background-color: #aa25fc;
-            border: none;
-            color: white;
-            transition: background-color 0.3s ease;
-        }
-        .btn-custom:hover {
-            background-color: #8b1f93;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Livros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #a98149;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .book-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .book-item {
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      background: #f4f4f4;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .book-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .book-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 10px 0;
+      color: #333;
+    }
+    .book-author {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .details-btn {
+      display: inline-block;
+      padding: 10px;
+      background-color: #3e583f;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .details-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="text-center">
-        <div class="container">
-            <h1>Bem-vindo à Minha Página!</h1>
-            <p class="lead">Explore e descubra mais.</p>
-        </div>
-    </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2>Sobre Nós</h2>
-                <p>
-                    Esta é uma página de exemplo criada para demonstrar um design simples e moderno usando HTML, CSS e o framework Bootstrap.
-                </p>
-                <a href="#" class="btn btn-custom">Saiba Mais</a>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="https://via.placeholder.com/400" alt="Imagem de exemplo" class="img-fluid rounded">
-            </div>
-        </div>
-    </main>
+  <header>
+    <h1>Bem-vindo à Biblioteca de Livros</h1>
+    <p>Explore, descubra e apaixone-se por novos livros!</p>
+  </header>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Minha Página. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <div class="container">
+    <div class="book-list">
+      <!-- Livro 1 -->
+      <div class="book-item">
+        <img src="https://www.saraivaconteudo.com.br/capas/53/download-box-trilogia-o-senhor-dos-aneis-jrr-tolkien-ler-online-pdf.jpg">
 
-    <!-- Scripts do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="book-title">O Senhor dos Anéis</div>
+        <div class="book-author">J.R.R. Tolkien</div>
+        <a href="#" class="details-btn">Ver Detalhes</a>
+      </div>
+      <!-- Livro 2 -->
+      <div class="book-item">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_871254-MLB45233333062_032021-F.jpg" alt="Capa de 1984">
+        <div class="book-title">1984</div>
+        <div class="book-author">George Orwell</div>
+        <a href="#" class="details-btn">Ver Detalhes</a>
+      </div>
+      <!-- Livro 3 -->
+      <div class="book-item">
+        <img src="https://th.bing.com/th/id/R.5b5b24cb3e897c2ad3fd73d5a99df451?rik=JI%2bJX%2fwTFrflWg&riu=http%3a%2f%2f2.bp.blogspot.com%2f-h10g_q2V4tw%2fVXn3Oa19L9I%2fAAAAAAAAAEQ%2f49jZFOReki0%2fs1600%2flivro%2bdom%2bcasmurro%2b6.jpg&ehk=CqC3Z2batxF0hbh3Y%2f%2fWqePXq%2fWKyQj7TMtWBCIjxc8%3d&risl=&pid=ImgRaw&r=0" alt="Capa de Dom Casmurro">
+        <div class="book-title">Dom Casmurro</div>
+        <div class="book-author">Machado de Assis</div>
+        <a href="#" class="details-btn">Ver Detalhes</a>
+      </div>
+        <!-- Livro 4  -->
+        <div class="book-item">
+            <img src="https://rollingstone.uol.com.br/media/uploads/2023/08/a1rg9jd7oyl.jpg" alt="Capa de 1984">
+            <div class="book-title">O sobrinho do mago</div>
+            <div class="book-author">cs</div>
+            <a href="#" class="details-btn">Ver Detalhes</a>
+          </div>
+            <!-- Livro 5 -->
+      <div class="book-item">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_871254-MLB45233333062_032021-F.jpg" alt="Capa de 1984">
+        <div class="book-title">1984</div>
+        <div class="book-author">George Orwell</div>
+        <a href="#" class="details-btn">Ver Detalhes</a>
+      </div>
+        <!-- Livro 5 -->
+        <div class="book-item">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_871254-MLB45233333062_032021-F.jpg" alt="Capa de 1984">
+            <div class="book-title">1984</div>
+            <div class="book-author">George Orwell</div>
+            <a href="#" class="details-btn">Ver Detalhes</a>
+          </div>
+            <!-- Livro 6 -->
+      <div class="book-item">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_871254-MLB45233333062_032021-F.jpg" alt="Capa de 1984">
+        <div class="book-title">1984</div>
+        <div class="book-author">George Orwell</div>
+        <a href="#" class="details-btn">Ver Detalhes</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
